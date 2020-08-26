@@ -12,8 +12,9 @@ router.register('articles', ArticleViewSet, basename="articles"),
 
 
 urlpatterns = [
-    re_path('', views.index),
     path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+    re_path('', views.index),
+] 
+#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
