@@ -2,11 +2,61 @@ import React from "react";
 // import axios from "axios";
 // import { Link } from "react-router-dom";
 // // Seo reasons
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 const BonusPage = () => {
+  const [articles, setArticles] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+  useEffect(() => {
+    axios
+      .get(`/api/articles/`)
+      .then((response) => {
+        setLoading(false);
+        // setArticles(response.data.slice(4, 9));
+        setArticles(response.data);
+        setError("");
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoading(false);
+        setError("We have an error with API");
+      });
+  }, []);
+  console.log("Yossi ");
+  console.log("articles ", articles);
+  const articleContainer = articles.length ? (
+    articles.map((article) => {
+      return (
+        <div className="news_container" key={article.id}>
+          <div className="newContainerFlex">
+            <div className="new_image_container">
+              <img src={`articleImage/${article.image}`} alt="" />
+            </div>
+
+            <div className="new_content_container">
+              <span className="mini_title_container">
+                <b>{article.name}</b>
+              </span>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: article.content.slice(0, 150),
+                }}
+              ></p>
+              ...
+              <a className="read_more_button" href={"/artikel-" + article.slug}>
+                Läs mera
+              </a>
+            </div>
+          </div>
+        </div>
+      );
+    })
+  ) : (
+    <div></div>
+  );
   return (
     <React.Fragment>
-      {/* <Helmet>
+      <Helmet>
         <title>
           Vad är syftet med olika online spelbonusar? | Casinoblogg.se
         </title>
@@ -15,7 +65,7 @@ const BonusPage = () => {
           content="Casinobolag erbjuder bonus, oftast i form av en välkomstbonus, och
           Free Spins för att få in nya kunder. Men storleken på bonusarna kan variera rätt kraftigt."
         />
-      </Helmet> */}
+      </Helmet>
       <div className="container">
         <h1 className="mt-5 text-center">Casinobonusar</h1>
         <p className="text-center">
@@ -49,9 +99,9 @@ const BonusPage = () => {
           chans att vinna.
         </p>
         <br />
-        {/* {error ? error : null}
+        {error ? error : null}
         {loading ? "Loading" : articleContainer}
-        <Link to="/casino-spel-slots"> Se fler </Link> */}
+        <Link to="/casino-spel-slots"> Se fler </Link>
         <h4 className="mt-5">Vad är en casino välkomstbonus?</h4>
         <p>
           En välkomstbonus kan bestå av att spelbolaget matchar spelarens{" "}

@@ -18,4 +18,6 @@ urlpatterns = [
     re_path('', views.index),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+## If i Dont include this the re_path will not include the static urls afterwards.
+# This is to recive the images from API.
 urlpatterns += staticfiles_urlpatterns()

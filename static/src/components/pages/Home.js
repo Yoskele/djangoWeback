@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import { Link, Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 // // Seo reasons
-// import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
@@ -25,9 +25,39 @@ const Home = () => {
   }, []);
   console.log("Yossi ");
   console.log("articles ", articles);
+  const articleContainer = articles.length ? (
+    articles.map((article) => {
+      return (
+        <div className="news_container" key={article.id}>
+          <div className="newContainerFlex">
+            <div className="new_image_container">
+              <img src={article.image} alt="" />
+            </div>
+
+            <div className="new_content_container">
+              <span className="mini_title_container">
+                <b>{article.name}</b>
+              </span>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: article.content.slice(0, 150),
+                }}
+              ></p>
+              ...
+              <a className="read_more_button" href={"/artikel-" + article.slug}>
+                Läs mera
+              </a>
+            </div>
+          </div>
+        </div>
+      );
+    })
+  ) : (
+    <div></div>
+  );
   return (
     <React.Fragment>
-      {/* <Helmet>
+      <Helmet>
         <title>
           Casinonyheter online: nytt från spelvärlden | Casinoblogg.se
         </title>
@@ -36,7 +66,7 @@ const Home = () => {
           content="På Casinobloggen.se finns nyheter från casino- och spelvärlden. Här
           finns allt möjligt relaterat till svenska spelmarknaden; intressanta artiklar & guider."
         />
-      </Helmet> */}
+      </Helmet>
       <div className="container  p-3">
         <h1 className="text-center">Välkommen till casino blogg.se!</h1>
         <hr />
@@ -58,9 +88,9 @@ const Home = () => {
         </p>
         <b className="m-0">Senaste Nyheter</b>
         <hr className="m-0" />
-        {/* {error ? error : null}
+        {error ? error : null}
         {loading ? "Loading" : articleContainer}
-        <Link to="/casino-bonus"> Se fler </Link> */}
+        <Link to="/casino-bonus"> Se fler </Link>
         <h4 className="mt-5">Hur många online casino finns det?</h4>
         <p>
           Det finns ett{" "}
