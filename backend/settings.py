@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '+cor81-=afhhmtrrqr33_=bg%h(!7duda2bh9zgs#dmrs0vj2%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -120,7 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = "/api/"
+
 # Might need to close this down when its Develop mode. 
 STATIC_ROOT = '/home/yosefLotter/djangoWebpack/static/'
 
