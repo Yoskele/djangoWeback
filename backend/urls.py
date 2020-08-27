@@ -9,10 +9,12 @@ router = routers.DefaultRouter()
 # register the links how you want it to start. and the function that comes from views.py file
 router.register('articles', ArticleViewSet, basename="articles"),
 
+from django.views.static import serve
 
 
 urlpatterns = [
     path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
     re_path('', views.index),
+    re_path(r'^static/(?:.*)$', serve, {'document_root': settings.STATIC_ROOT, })
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
