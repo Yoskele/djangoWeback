@@ -122,7 +122,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Might need to close this down when its Develop mode. 
-STATIC_ROOT = '/home/yosefLotter/djangoWebpack/articleImage/'
+STATIC_ROOT = '/home/yosefLotter/djangoWebpack/static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
