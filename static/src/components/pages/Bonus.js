@@ -1,6 +1,6 @@
-import React from "react";
-// import axios from "axios";
-// import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 // // Seo reasons
 import { Helmet } from "react-helmet";
 const BonusPage = () => {
@@ -22,7 +22,7 @@ const BonusPage = () => {
         setError("We have an error with API");
       });
   }, []);
-  console.log("Yossi ");
+  console.log("Welcome To bonus page... ");
   console.log("articles ", articles);
   const articleContainer = articles.length ? (
     articles.map((article) => {

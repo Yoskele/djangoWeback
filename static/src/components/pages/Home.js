@@ -23,7 +23,7 @@ const Home = () => {
         setError("We have an error with API");
       });
   }, []);
-  console.log("Yossi ");
+  console.log("Welcome To Home page... ");
   console.log("articles ", articles);
   const articleContainer = articles.length ? (
     articles.map((article) => {
