@@ -121,9 +121,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Might need to close this down when its Develop mode. 
+# This needed in production
 STATIC_ROOT = '/home/yosefLotter/djangoWebpack/static/'
+
+# MEDIA_URL = '/media/'
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
