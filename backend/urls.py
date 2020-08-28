@@ -41,4 +41,4 @@ urlpatterns = [
 ## If i Dont include this the re_path will not include the static urls afterwards.
 # This is to recive the images from
 # Could be broken.
-# urlpatterns += staticfiles_urlpatterns()
+urlpatterns += staticfiles_urlpatterns()
