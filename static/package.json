@@ -17,12 +17,12 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.2",
+    "html-webpack-plugin": "^4.3.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "axios": "^0.20.0",
-    "html-webpack-plugin": "^4.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",

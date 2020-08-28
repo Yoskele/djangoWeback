@@ -31,7 +31,6 @@ const Home = () => {
         <div className="news_container" key={article.id}>
           <div className="newContainerFlex">
             <div className="new_image_container">
-              {/* <img src={article.image} alt="" /> */}
               <img src={article.image} alt="" />
             </div>
 

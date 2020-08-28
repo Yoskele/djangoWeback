@@ -8,14 +8,14 @@ const Navbar = () => {
         <Link className="navLinkContainer" to="/">
           Senaste casino nyheter
         </Link>
-        <br />
+        <br /> <br />
         <Link className="navLinkContainer" to="/casino-bonus">
           Bonus
         </Link>
-
-        {/* <Link className="navLinkContainer" to="/casino-spel-slots">
+        <br /> <br />
+        <Link className="navLinkContainer" to="/casino-spel-slots">
           Casino spel
-        </Link> */}
+        </Link>
       </div>
     </nav>
   );
