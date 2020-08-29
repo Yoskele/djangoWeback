@@ -128,7 +128,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # This needed in production
-#STATIC_ROOT = '/home/yosefLotter/staticFilesCasinoBlogg/'
+STATIC_ROOT = '/home/yosefLotter/staticFilesCasinoBlogg/'
 
 
 STATICFILES_DIRS = [
@@ -139,5 +139,7 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/upload/'
 MEDIA_ROOT = 'uploads/'
 
+
+# This is for me DEVMODE...
 # Python3 manage.py collecstatic will put all the files to this folder...
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
