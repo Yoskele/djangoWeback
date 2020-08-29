@@ -128,11 +128,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # This needed in production
-STATIC_ROOT = '/home/yosefLotter/djangoWebpack/staticFilesCasinoBlogg/'
+STATIC_ROOT = '/home/yosefLotter/staticFilesCasinoBlogg/'
 MEDIA_URL = '/upload/'
-MEDIA_ROOT = '/home/yosefLotter/djangoWebpack/uploads/'
-
-
+MEDIA_ROOT = 'uploads/'
 
 
 
@@ -142,8 +140,8 @@ STATICFILES_DIRS = [
 ]
 
 
-# MEDIA_URL = '/upload/'
-# MEDIA_ROOT = 'uploads/'
+MEDIA_URL = '/upload/'
+MEDIA_ROOT = 'uploads/'
 
 
 # This is for me DEVMODE...
