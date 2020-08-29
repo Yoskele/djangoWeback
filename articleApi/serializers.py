@@ -4,4 +4,5 @@ from articleApi.models import Article
 class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
-        fields = 'id', 'slug', 'content', 'image' 
+        fields = '__all__'
+        lookup_field = 'slug'

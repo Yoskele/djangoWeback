@@ -6,10 +6,10 @@ import Navbar from "./components/navbar/Navbar";
 const Index = () => {
   return (
     <div>
-      <h4 className="text-center navLogo">Casino blogg</h4>
+      <h5 className="text-center navLogo">Casino blogg</h5>
       <BrowserRouter>
-        <Routes />
         <Navbar />
+        <Routes />
       </BrowserRouter>
     </div>
   );

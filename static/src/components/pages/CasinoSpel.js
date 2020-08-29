@@ -11,7 +11,7 @@ const CasinoSpel = () => {
   // Bring in the first 4 articles in the list from API.
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/articles/`)
+      .get(`/api/articles/`)
       .then((response) => {
         setLoading(false);
         setArticles(response.data.slice(10, 14));

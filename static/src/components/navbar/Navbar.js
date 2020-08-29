@@ -8,11 +8,11 @@ const Navbar = () => {
         <Link className="navLinkContainer" to="/">
           Senaste casino nyheter
         </Link>
-        <br /> <br />
+
         <Link className="navLinkContainer" to="/casino-bonus">
           Bonus
         </Link>
-        <br /> <br />
+
         <Link className="navLinkContainer" to="/casino-spel-slots">
           Casino spel
         </Link>

@@ -44,7 +44,7 @@ const Home = () => {
                 }}
               ></p>
               ...
-              <a className="read_more_button" href={"/artikel-" + article.slug}>
+              <a className="read_more_button" href={"artikel-" + article.slug}>
                 Läs mera
               </a>
             </div>

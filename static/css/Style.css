@@ -1,3 +1,236 @@
+#root {
+  min-height: 100vh;
+}
+p {
+  line-height: 2rem;
+}
 h1 {
-  color: red;
+  margin-top: 25px;
+  color: #414141;
+}
+h3 {
+  margin-top: 25px;
+  color: #414141;
+}
+.newContainerFlex {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  width: 90%;
+  margin: 10px auto 10px auto;
+  padding: 5px;
+}
+.new_image_container {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: none;
+}
+.new_image_container img {
+  width: 200px;
+}
+.new_content_container {
+  flex: 1;
+  padding: 10px;
+}
+.mini_title_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+.mini_title_container p {
+  margin: 0;
+  color: #0b203d;
+}
+.new_content_container b {
+  font-style: italic;
+  color: #414141;
+}
+.read_more_button {
+  cursor: pointer;
+  float: right;
+  color: rgb(85, 26, 139);
+}
+
+body {
+  background: #f9f3d8;
+  height: 100%;
+  margin: 0;
+}
+nav {
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background: #414141;
+  opacity: 0.8;
+}
+.navLogo {
+  font-family: "Courgette", cursive;
+  font-size: 55px;
+  margin: 5px auto 20px auto;
+  color: #414141;
+  text-align: center;
+}
+.navbarContainer {
+  width: 55%;
+  margin: 0 auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+}
+.navLinkContainer:hover {
+  transform: scale(1.02);
+}
+.navLinkContainer {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 4px;
+}
+#cookie_container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #414149;
+}
+#cookie_content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+#cookie_content p {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+#cookie_content a {
+  margin: 0;
+  padding: 0;
+}
+#accept_cookie_button {
+  cursor: pointer;
+  color: #337ab7;
+}
+#accept_cookie_button {
+  margin-left: 50px;
+}
+#accept_cookie_button:hover {
+  text-decoration: underline;
+}
+footer {
+  max-width: 100%;
+  color: white;
+  background: #414141;
+  color: #fafafa;
+  padding: 5px;
+  margin: 0;
+}
+.footer_container {
+  bottom: 0;
+  width: 90%;
+  margin: 0px auto 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer_container h3 {
+  width: 100%;
+}
+.contact_container {
+  width: 30%;
+}
+.contact_container a {
+  color: white;
+}
+.sponsor_container a {
+  color: white;
+  margin: 5px;
+}
+@media (max-width: 450px) {
+  .navbarContainer {
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    font-size: 0.9rem;
+  }
+}
+.mainContainer {
+  border: 1px solid lightgray;
+  width: 60%;
+  margin: 5px auto 5px auto;
+  padding: 10px;
+}
+.mainContainer h3 {
+  color: #414141;
+}
+.casinosContainer {
+  width: 90%;
+  margin: 3px auto 5px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.casino_container {
+  width: 280px;
+  height: 250px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.casino_image_container {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.casino_container img {
+  width: 250px;
+  height: 100px;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+.casino_container b {
+  text-align: center;
+  padding: 5px;
+  color: #414141;
+}
+.casino_container a {
+  text-decoration: none;
+}
+.casino_container label {
+  text-align: center;
+  font-size: 0.8em;
+}
+.welcome_container {
+  text-align: center;
+  width: 80%;
+  margin: 10px auto 10px auto;
+}
+.welcome_container h1 {
+  font-size: 1.5em;
+  color: #414141;
+}
+.news_container {
+  width: 80%;
+  margin: 0px auto 10px auto;
+}
+.footer {
+  max-width: 100%;
+  color: white;
+  background: #414141;
+  color: #fafafa;
+  padding: 5px;
+  margin: 0;
 }
