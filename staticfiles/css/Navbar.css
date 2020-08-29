@@ -1,0 +1,42 @@
+nav {
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background: #414141;
+  opacity: 0.8;
+}
+.navLogo {
+  font-family: "Courgette", cursive;
+  font-size: 55px;
+  margin: 5px auto 20px auto;
+  color: #414141;
+  text-align: center;
+}
+.navbarContainer {
+  width: 55%;
+  margin: 0 auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+}
+.navLinkContainer:hover {
+  transform: scale(1.02);
+}
+.navLinkContainer {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 4px;
+}
+@media (max-width: 450px) {
+  .navbarContainer {
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+  }
+}
