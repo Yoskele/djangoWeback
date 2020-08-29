@@ -128,7 +128,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # This needed in production
-STATIC_ROOT = '/home/yosefLotter/djangoWebpack/staticFiles/'
+STATIC_ROOT = '/home/yosefLotter/staticFilesCasinoBlogg/'
 
 
 STATICFILES_DIRS = [
