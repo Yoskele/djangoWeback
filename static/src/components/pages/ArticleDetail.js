@@ -34,7 +34,7 @@ const ArticleDetial = (props) => {
         <div className="news_container " key={article.id}>
           <div className="newContainerFlex">
             <div className="new_image_container">
-              <img src={article.image} alt="" />
+              <img src={article.articleLogo} alt="" />
             </div>
 
             <div className="new_content_container">
@@ -43,13 +43,13 @@ const ArticleDetial = (props) => {
               </span>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: article.content.slice(0, 150),
+                  __html: article.content.slice(0, 300),
                 }}
               ></p>
               ...
               <Link
                 className="read_more_button"
-                to={"/artikel/" + article.slug}
+                to={"/artikel-" + article.slug}
               >
                 Läs mera
               </Link>
@@ -71,7 +71,7 @@ const ArticleDetial = (props) => {
           <br />
           <h1> {article.name}</h1>
           <img
-            src={article.image}
+            src={article.articleLogo}
             alt=""
             style={{ width: "290px" }}
             className="float-right"

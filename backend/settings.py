@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'articleApi',
     'rest_framework',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
+
+CKEDITOR_UPLOAD_PATH = 'uploads/ckeditorImages'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -124,12 +128,13 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # This needed in production
-STATIC_ROOT = '/home/yosefLotter/djangoWebpack/static/'
-
-# MEDIA_URL = '/media/'
+STATIC_ROOT = '/home/yosefLotter/djangoWebpack/staticFiles/'
 
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
+
+MEDIA_URL = '/upload/'
+MEDIA_ROOT = 'uploads/'
